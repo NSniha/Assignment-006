@@ -39,12 +39,15 @@
                                 </svg>
                             </div>
                             <ul tabindex="0"
-                                class="menu menu-sm dropdown-content bg-base-100 h-96 z-1 mt-3 w-56 p-14 max-auto shadow-sm text-white bg-[#1d8d47] -left-4">
+                                class="menu menu-sm dropdown-content bg-base-100 h-96 z-1 mt-3 w-56 py-14 px-8 max-auto shadow-sm text-white bg-[#1d8d47] -left-4">
                                 <li>
                                     <a href="#about" class="text-base font-medium">About</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="text-base font-medium">Gallery</a>
+                                    <a href="#plant-category" class="text-base font-medium">Plant Category</a>
+                                </li>
+                                <li>
+                                    <a href="#impact" class="text-base font-medium">Our Impact</a>
                                 </li>
                                 <li>
                                     <a href="#contact" class="text-base font-medium">Plant a tree</a>
@@ -59,7 +62,7 @@
                                 <a href="#about" class="hover:bg-transparent hover:text-white text-base font-medium">About</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:bg-transparent hover:text-white text-base font-medium">Gallery</a>
+                                <a href="#plant-category" class="hover:bg-transparent hover:text-white text-base font-medium">Plant Category</a>
                             </li>
                             <li>
                                 <a href="#contact" class="hover:bg-transparent hover:text-white text-base font-medium">Plant a tree</a>
@@ -98,8 +101,83 @@
             <!-- ============== Hero Section End =============== -->
 
 
+            <!-- ============== Choose Tree Section Start ============= -->
+            <section id="plant-category" class="lg:pt-18 lg:pb-20 py-12 bg-[#E6FAF1] text-gray-900">
+                <div class="w-full max-w-screen-2xl mx-auto px-4">
+                    <div class="pb-12">
+                        <h2 class="lg:text-4xl text-3xl text-center font-semibold">
+                            Choose Your Trees
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-12 gap-3">
+                        <!-- ======= Sidebar ========== -->
+                        <aside class="col-span-12 md:col-span-2 rounded-xl lg:px-3 p-6 lg:bg-transparent bg-white h-[110vsh]">
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-bold lg:text-2xl text-xl pb-2">Categories</h3>
+                            </div>
+                            <ul id="categoryList" class="mt-3 space-y-2"></ul>
+                        </aside>
+
+                        <!-- ========== Product ========== -->
+                        <aside class="col-span-12 md:col-span-8">
+                            <div id="gridLoader" class="w-full flex items-center justify-center py-12">
+                                <div class="w-10 h-10 rounded-full border-4 border-green-300 border-t-transparent animate-spin">
+                                </div>
+                            </div>
+
+                            <div id="stateMsg" class="hidden text-center text-gray-600 py-8"></div>
+                            <div id="plantGrid" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-3"></div>
+                        </aside>
+                       
+                        <!-- ======= Cart ======== -->
+                        <aside class="col-span-12 md:col-span-2 bg-white rounded-xl shadow overflow-hidden">
+                            <div class="px-4 py-3 border-b border-[#f1f1f1] flex items-center justify-between">
+                                <h3  class="font-bold lg:text-xl text-lg">Your Cart</h3>
+                                <span id="cartCount" class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700">0</span>
+                            </div>
+
+                            <div id="cartBody" class="px-4 transition-all duration-300 ease-in-out overflow-hidden [max-height:0]">
+                                <ul id="cartList" class="divide-y pt-3 pb-1"></ul>
+                                <p id="cartEmpty" class="text-sm text-gray-500 py-4 hidden">You cart is empty</p>
+                            </div>
+
+                            <div id="cartFooter" class="px-4 py-3 border-t border-[#cccaca]">
+                                <div class="flex justify-between items-center font-semibold mb-2">
+                                    <span>Total</span>
+                                    <span id="cartTotal">৳0</span>
+                                </div>
+                            </div>
+                        </aside> 
+                    </div>
+                </div>
+            </section>
+            <dialog id="plantModal"
+                class="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-lg rounded-2xl p-0">
+                <div class="bg-white rounded-2xl overflow-hidden">
+                    <div class="flex items-center justify-between px-5 py-3 border-b-1 border-[#dddddd]">
+                        <h3 id="modalTitle" class="lg:text-2xl text-xl font-bold">Plant Details</h3>
+                        <form method="dialog">
+                            <button class="px-3 py-1 rounded bg-gray-100 hover:bg-gray-200 cursor-pointer" aria-label="Close">
+                                ✕
+                            </button>
+                        </form>
+                    </div>
+                    <div id="modalBody" class="p-5 gap-4"></div>
+                    <div class="px-5 pb-5">
+                        <form method="dialog" class="w-full">
+                            <button
+                                class="w-full py-2 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold cursor-pointer">
+                                Buy Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            <!-- ============== Choose Tree Section End ================ -->
+
+
             <!-- ============= About Section Start ===================== -->
-            <section id="about" class="pt-18 pb-20 bg-[#E6FAF1] text-gray-900">
+            <section id="about" class="lg:pt-4 lg:pb-20 pt-6 pb-16 bg-[#E6FAF1] text-gray-900">
                 <div class="w-full max-w-screen-2xl mx-auto px-4">
                     <div class="pb-12">
                         <h2 class="lg:text-4xl text-3xl text-center font-semibold">
@@ -113,16 +191,16 @@
                         <div class="">
                             <p class="text-gray-500 lg:text-[17px] text-sm">Green Earth is a global tree-planting campaign dedicated to restoring balance to our environment. We believe that every tree planted is a step toward cleaner air, healthier soil, and stronger communities. Since our beginning, we have planted over 500,000 trees worldwide, with the goal of reaching millions more in the coming years.</p>
                             <p class="lg:mt-4 mt-4 text-gray-500 lg:text-[17px] text-sm">Our mission extends beyond just planting trees. We work closely with local communities, schools, and organizations to raise awareness about climate action, promote green practices, and inspire individuals to take responsibility for the Earth. By joining Green Earth, you are not only planting trees but also investing in a sustainable future for generations to come.</p>
-                            <ul class="list-disc mt-8 ml-5">
+                            <ul class="list-disc mt-8 ml-5 mb-12">
                                 <li class="lg:mt-2 mt-2 text-gray-500 lg:text-[17px] text-sm"> Reforest degraded lands and bring back biodiversity.</li>
                                 <li class="lg:mt-2 mt-2 text-gray-500 lg:text-[17px] text-sm"> Create safe habitats for wildlife and protect endangered species.</li>
                                 <li class="lg:mt-2 mt-2 text-gray-500 lg:text-[17px] text-sm">Support local communities with eco-friendly jobs and resources.</li>
                                 <li class="lg:mt-2 mt-2 text-gray-500 lg:text-[17px] text-sm">Reduce carbon emissions and help combat global warming.</li>
                                 <li class="lg:mt-2 mt-2 text-gray-500 lg:text-[17px] text-sm">Educate and inspire the next generation to live sustainably.</li>
                             </ul>
-                            <button class="mt-6 lg:px-6 px-4 lg:py-3 py-2 hover:bg-[#FACC15] hover:text-[#15803D] font-semibold rounded-full shadow-sm bg-[#15803D] text-white transition-all lg:w-50 w-36 mx-auto lg:text-lg text-base">
+                            <a href="#contact" class="mt-6 lg:px-6 px-4 lg:py-3 py-2 hover:bg-[#FACC15] hover:text-[#15803D] font-semibold rounded-full shadow-sm bg-[#15803D] text-white transition-all lg:w-50 w-36 mx-auto lg:text-lg text-base">
                             Get Involved
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +209,7 @@
 
 
             <!-- ============== Our Impact Section Start ============== -->
-            <section class="impact-section bg-[#CFF0DC] py-16">
+            <section id="impact" class="impact-section bg-[#CFF0DC] py-16">
                 <div class="w-full max-w-screen-2xl mx-auto px-4">
                     <div class="pb-12">
                         <h2 class="lg:text-4xl text-3xl text-center font-semibold">
@@ -202,6 +280,7 @@
             <!-- ============== Contact Section End ================= -->
         </main>
 
+        
         <footer>
             <!-- ============== Copyright ================ -->
             <div class="py-8 text-center text-sm text-white bg-[#14532D]">
