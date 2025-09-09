@@ -1,0 +1,8 @@
+.font-inter {
+    font-family: "Inter", sans-serif;
+}
+
+.menu li a:hover {
+    background: transparent !important;
+    color: #FACC15 !important;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- ========= Title =========== -->
+        <title>Green Earth | Landing Page</title>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+        <!-- =========== Custom Link & CDN =========== -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            dialog::backdrop {
+                background: rgba(0, 0, 0, 0.747);
+            }
+        </style>
+
+        <!-- ========== Google Fonts ============== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    </head>
+
+    <body class="font-inter scroll-smooth">
+        <header class="bg-[#15803D]">
+            <!-- ============= Header =============== -->
+            <div class="w-full max-w-screen-xl mx-auto">
+                <div class="navbar">
+                    <div class="navbar-start">
+                        <div class="dropdown text-white">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 h-96 z-1 mt-3 w-56 p-14 max-auto shadow-sm text-white bg-[#1d8d47] -left-4">
+                                <li>
+                                    <a href="#about" class="text-base font-medium">About</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base font-medium">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#contact" class="text-base font-medium">Plant a tree</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="font-bold lg:text-2xl text-xl text-white">Green Earth</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex text-white">
+                        <ul class="menu menu-horizontal text-base gap-4">
+                            <li>
+                                <a href="#about" class="hover:bg-transparent hover:text-white text-base font-medium">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:bg-transparent hover:text-white text-base font-medium">Gallery</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="hover:bg-transparent hover:text-white text-base font-medium">Plant a tree</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <a class="btn bg-[#FACC15] border-none outline-none shadow-none py-3 lg:px-8 px-5 rounded-3xl text-[#15803D] lg:text-lg text-base lg:h-12 h-10">Plant a Tree</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- ============== Hero Section Start =============== -->
+            <section class="hero-section relative bg-[#CFF0DC] h-72 md:h-96 flex items-center justify-center overflow-hidden">
+                <div class="relative w-full max-w-screen-xl mx-auto h-full">
+                    <img src="images/hero-leaf1.png" alt="Leaf Left"
+                        class="absolute left-0 bottom-0 w-32 md:w-64 lg:w-96 md:h-72 h-32 -translate-x-20" />
+                    <div class="relative z-10 max-w-3xl mx-auto px-4 text-center flex flex-col justify-center h-full">
+                        <h1 class="text-3xl md:text-5xl font-bold text-[#1F2937]">
+                            Plant Today, Sustain Tomorrow
+                        </h1>
+                        <p class="lg:mt-4 mt-2 text-[#1F2937] lg:text-lg text-sm">
+                            Support our commitment to planting 1 million trees and building a greener, more sustainable future for generations ahead.
+                        </p>
+                        <button
+                            class="mt-6 lg:px-6 px-4 lg:py-3 py-2 hover:bg-[#FACC15] hover:border-2 hover:text-[#15803D] font-semibold rounded-full shadow-sm bg-[#15803D] text-white transition-all lg:w-50 w-36 mx-auto lg:text-lg text-base">
+                            Get Involved
+                        </button>
+                    </div>
+                    <img src="images/hero-leaf2.png" alt="Leaf right"
+                        class="absolute right-0 bottom-0 w-32 md:w-64 lg:w-96 md:h-72 h-32 translate-x-20" />
+                </div>
+            </section>
+            <!-- ============== Hero Section End =============== -->
+
+
+            <!-- ============== Our Impact Section Start ============== -->
+            <section class="impact-section bg-[#CFF0DC] mt-20 py-16">
+                <div class="w-full max-w-screen-xl mx-auto">
+                    <div class="pb-12">
+                        <h2 class="lg:text-4xl text-3xl text-center font-semibold">
+                            Our Impact
+                        </h2>
+                    </div>
+                    <div class="grid lg:grid-cols-3 grid-cols-1 gap-5 mx-4">
+                        <div class="bg-white rounded-xl text-center lg:p-9 p-8">
+                            <h3 class="lg:text-4xl text-3xl font-bold leading-normal text-[#15803D]">
+                                500K+
+                            </h3>
+                            <p class="lg:text-lg font-normal text-[#1F2937]">Trees Planted</p>
+                        </div>
+
+                        <div class="bg-white rounded-xl text-center lg:p-9 p-8">
+                            <h3 class="lg:text-4xl text-3xl font-bold leading-normal text-[#15803D]">
+                                120+
+                            </h3>
+                            <p class="lg:text-lg font-normal text-[#1F2937]">
+                                Communities Involved
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-xl text-center lg:p-9 p-8">
+                            <h3 class="lg:text-4xl text-3xl font-bold leading-normal text-[#15803D]">
+                                30+
+                            </h3>
+                            <p class="lg:text-lg font-normal text-[#1F2937]">
+                                Countries Reached
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ============== Our Impact Section End ============== -->
+
+
+            <!-- ============== Contact Section Start ================= -->
+            <section class="bg-[#166534] py-16" id="contact">
+                <div class="w-full max-w-screen-xl mx-auto">
+                    <div class="pb-12">
+                        <h2 class="lg:text-4xl text-3xl text-center font-semibold text-white">
+                            Plant a Tree Today
+                        </h2>
+                    </div>
+                    <div class="bg-[#15803D] max-w-lg shadow-lg lg:p-8 p-6 lg:mx-auto mx-4 text-center rounded-xl">
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Your Name"
+                                class="bg-white border-none outline-none w-full px-4 py-2 text-[#1F2937] lg:text-base text-sm font-medium rounded-sm" />
+                            <input type="email" placeholder="Your Email Address"
+                                class="bg-white border-none outline-none w-full px-4 py-2 text-gray-600 lg:text-base text-sm font-medium rounded-sm" />
+                            <select
+                                class="select bg-white border-none w-full px-4 py-2 text-gray-500 lg:text-base text-sm font-medium rounded-sm focus:outline-none focus:ring-0">
+                                <option disabled selected class="text-gray-500">
+                                    Number of Trees
+                                </option>
+                                <option class="text-[#1F2937]">1 Tree</option>
+                                <option class="text-[#1F2937]">5 Tree</option>
+                                <option class="text-[#1F2937]">10 Tree</option>
+                                <option class="text-[#1F2937]">15 Tree</option>
+                            </select>
+                            <button type="submit" class="w-full bg-yellow-400 text-[#15803D] font-semibold lg:py-3 py-2 rounded-full shadow hover:bg-[#CFF0DC] transition">
+                                Donate Now</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- ============== Contact Section End ================= -->
+        </main>
+
+        <footer>
+            <!-- ============== Copyright ================ -->
+            <div class="py-8 text-center text-sm text-white bg-[#14532D]">
+                © 2025 Green Earth. All Rights Reserved.
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
